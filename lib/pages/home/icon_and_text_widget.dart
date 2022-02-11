@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 
-import '../utils/dimensions.dart';
+import '../../utils/dimensions.dart';
+
 
 class IconAndTextWidget extends StatelessWidget {
   final IconData icon;
