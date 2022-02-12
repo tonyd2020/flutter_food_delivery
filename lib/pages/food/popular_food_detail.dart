@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/widgets/app_column.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
+import 'package:food_delivery/widgets/expandable_text_widget.dart';
 
 import '../../utils/dimensions.dart';
 import '../../widgets/big_text.dart';
@@ -69,12 +70,21 @@ class PopularFoodDetail extends StatelessWidget {
                   SizedBox(
                     height: Dimensions.height20,
                   ),
-                  BigText(text: "Introduction")
+                  BigText(text: "Introduction"),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableTextWidget(
+                          text:
+                              "The messier the burger, the better it tastes. The Aussie burger, messy edition. Give Curtis' epic burger a go when those cravings hit. Make beetroot relish and chilli mayo ahead to save time. They can be made up to 3 days ahead, covered separately and refrigerated. Drain any excess juices from relish before serving, if desired."),
+                    ),
+                  )
                 ],
               ),
             ),
           ),
-          //Expandable Text for foodd details
         ],
       ),
       bottomNavigationBar: Container(
@@ -85,7 +95,7 @@ class PopularFoodDetail extends StatelessWidget {
             left: Dimensions.width20,
             right: Dimensions.width20),
         decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Colors.grey.shade300,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(Dimensions.radius20 * 2),
               topRight: Radius.circular(Dimensions.radius20 * 2),
